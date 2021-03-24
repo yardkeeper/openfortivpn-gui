@@ -15,7 +15,7 @@ if [[ $? -eq 2 ]];
     pass=$(echo $credentials | cut -d '|' -f 2)
     otp=$(echo $credentials | cut -d '|' -f 3)
 
-nohup openfortivpn 212.179.203.50:10443 -u $user -p $pass --trusted-cert=here need to place cert hash --otp=$otp &>/dev/null &
+nohup openfortivpn ip:port -u $user -p $pass --trusted-cert=here need to place cert hash --otp=$otp &>/dev/null &
 
 elif [[ $? -eq 1 ]];
 then
